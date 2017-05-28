@@ -1,0 +1,18 @@
+{{x}}
+<button [disabled]="bool" (click)="fun()">click me</button>
+<input type="text" [(ngModel)]="s"/>
+{{s}}
+
+<input type="text" #in (keyup)="0"/>
+{{in.value}}
+<input type="number" value="0" #in1 (keyup)="cal(in1.value,in2.value,sel.value)"/>
+<select #sel  (change)="cal(in1.value,in2.value,sel.value)">
+  <option selected value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">x</option>
+  <option value="/">/</option>
+</select>
+<input type="number" value="0" #in2 (keyup)="cal(in1.value,in2.value,sel.value)"/>
+<h1>
+  {{ans}}
+</h1>
