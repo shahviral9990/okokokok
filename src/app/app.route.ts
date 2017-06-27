@@ -2,7 +2,7 @@ import {Routes,RouterModule} from "@angular/router";
 import { DemoComponent} from "./demo/demo.component";
 import {FormComponent} from "./form/form.component";
 import { TasksComponent } from "./tasks/tasks.component";
-
+import { FiretaskComponent } from "./firetask/firetask.component";
 import { AddTaskComponent1 } from "./add-task/add-task.component";
 const route:Routes=[
     {

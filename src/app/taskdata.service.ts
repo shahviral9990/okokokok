@@ -16,10 +16,22 @@ addTaskWeb(item)
   let body=JSON.stringify(item);
   let header=new Headers({'Content-Type':'application/json'});
   let req=new RequestOptions({headers:header});
+  
+    return this.http.post(this.url,body,req).map(
+    (data:Response)=>data.json()
+  );
+}
+postimage(item)
+{ console.log(item);
+  let body=item;
+  let header=new Headers({'Content-Transfer-Encoding': 'utf-8' });
+  let req=new RequestOptions({headers:header});
+  console.log(body);
   return this.http.post(this.url,body,req).map(
     (data:Response)=>data.json()
   );
 }
+
   getAllTask(){
 
     return this.arr;

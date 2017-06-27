@@ -1,6 +1,17 @@
-<form [formGroup]="myform" (ngSubmit)="ngSubmit()">
+<!--<form [formGroup]="myform" (ngSubmit)="ngSubmit()">
     <input formControlName="id" placeholder="id" type="text" />
     <input formControlName="title" placeholder="title" type="text" />
     <input formControlName="status" placeholder="status" type="text" />
     <button type="submit" [disabled]="!myform.valid">Submit</button>
 </form>
+-->
+
+<!--<form>
+    <input type="file" name="sampleFiles" file-model="myFiles" #input/>
+    <input type='submit' (click)="abc(input)" value='Upload!' />
+</form>-->
+<input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+<!-- button to trigger the file upload when submitted -->
+<button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+      Upload with ng-2 file uploader
+</button>
